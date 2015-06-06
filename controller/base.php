@@ -70,28 +70,9 @@ class BaseController{
 	*
 	*/
 	public function admin(){
-		$users = DB::get('users');
-		$fetch = DB::select('users',['name','email','usertype','gender'],['id' => $this->user]);
-		foreach($fetch as $found){
-			$name = $found['name'];
-			$email = $found['email'];
-			$usertype = $found['usertype'];
-			$gender = $found['gender'];
-		}
-		if( count( explode(' ', $name) ) > 1 ){
-			list($firstname, $lastname) = explode(' ', $name);
-		}else{
-			$firstname = $name;
-			$lastname = '';
-		}
+		$transcripts = DB::get('transcripts');
 		$data = [
-		'users' 		=> $users,
-		'firstname'      	=> $firstname,
-		'lastname' 		=> $lastname,
-		'email'			=> $email,
-		'usertype'		=> $usertype,
-		'gender'		=> $gender,
-		'usertypes'		=> ['admin','pharmacist','pediatrist','patient','ministry']
+		'transcripts' 		=> $transcripts
 		];
 		return $data;
 	}

@@ -33,7 +33,8 @@ $(document).ready(function ($) {
   		data: data
   	}).done(function(response){
   		if(response === "hod"){
-  			alert("Good");
+  			var base = $('base').prop('href');
+  			window.location.replace(base+'/index.php/admin');
   		}
   	});
   });
