@@ -5,8 +5,9 @@
 $routes = 
 array(
 	// Register routes
-	'view-login', #get
-	'controller-auth', #post
+	'view-login', #GET
+	'view-admin',
+	'controller-auth', #POST
 	'controller-logout',
 	'controller-apply'
 );

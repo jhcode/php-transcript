@@ -24,6 +24,19 @@ $(document).ready(function ($) {
       $('#contactForm').trigger("reset");
   	});
   });
+  $('#authForm').submit(function(e){
+  	e.preventDefault();
+  	var data = $(this).serialize(), url = $(this).prop('action');
+  	$.ajax({
+  		type: 'POST',
+  		url: url,
+  		data: data
+  	}).done(function(response){
+  		if(response === "hod"){
+  			alert("Good");
+  		}
+  	});
+  });
         
         
 });

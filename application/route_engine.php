@@ -78,6 +78,7 @@ if($route === '/'){
 }elseif(!in_array($route, $modded)&&!in_array($route, $modded_suffixed)){
 	$__e = 'Routing Error';
 	$errors = 'Route is not set for '.$route;
+        require_once BASE_DIR.'/config.php';
 	require_once BASE_DIR.'/application/errors.php';
 	die();
 }

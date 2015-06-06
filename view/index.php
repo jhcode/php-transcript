@@ -250,24 +250,25 @@
             </div>
             <div class="row">
             <div class="col-md-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="authForm" method="post" action="<?= url(); ?>/auth">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your user name *" id="name" required data-validation-required-message="Please enter your user name.">
+                                    <input type="text" class="form-control" placeholder="Your user name *" id="name" name="user" required data-validation-required-message="Please enter your user name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Your Password *" id="email" required data-validation-required-message="Please enter your password.">
+                                    <input type="password" class="form-control" placeholder="Your Password *" id="email" name="password" required data-validation-required-message="Please enter your password.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Staff ID*" id="id" required data-validation-required-message="Please enter your Staff ID">
+                                    <input type="tel" class="form-control" placeholder="Your Staff ID*" id="id" name="staff_id" required data-validation-required-message="Please enter your Staff ID">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
+                            <input type="hidden" name="source" value="login">
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
                                 <button type="submit" class="btn btn-primary">Apply for Transcript</button>

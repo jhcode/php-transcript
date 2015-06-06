@@ -75,16 +75,16 @@ class Blowfish{
 	public static function verify($username, $password){
 		global $conn;
 		try {
-			$bind = [':email' => $username];
-			$query = 'SELECT id, email, usertype, password FROM users WHERE email = :email';
+			$bind = [':username' => $username];
+			$query = 'SELECT id, username, staff_type, password FROM administrators WHERE username = :username';
 			$result_set = $conn->prepare($query);
 			$result_set->execute($bind);
 			if($result_set->rowCount() == 1):
 				foreach ($result_set as $found) {
 					if ( crypt($password, $found['password']) == $found['password'] ) {
 						Session::put('id', $found['id']);
-						Session::put('usertype', $found['usertype']);
-						return $found['usertype'];
+						Session::put('staff_type', $found['staff_type']);
+						return $found['staff_type'];
 					}else{
 						return false;
 					}
