@@ -13,7 +13,6 @@
     <?= HTML::stylesheet('bootstrap/css/bootstrap.min.css') ?>
     <?= HTML::stylesheet('font-awesome.min.css') ?>
     <?= HTML::stylesheet('animate.css') ?>
-    <?= HTML::stylesheet('animations.css') ?>
     <?= HTML::stylesheet('style.css') ?>
 
     <!-- Scripts -->
@@ -193,7 +192,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <form name="sentMessage" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="contactForm" novalidate>
+                    <form name="sentMessage" method="post" action="<?= url(); ?>/apply" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -661,7 +660,7 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member">
-                        <?= HTML::image('team/team-1.png', '', 'img-responsive'); ?>
+                        <?= HTML::image('team/team-1.jpg', '', 'img-responsive'); ?>
                         <div class="team-details">
                             <h4>John Doe</h4>
                             <div class="designation">Senior Web Developer</div>
@@ -678,7 +677,7 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member">
-                        <?= HTML::image('team/team-2.png', '', 'img-responsive'); ?>
+                        <?= HTML::image('team/team-2.jpg', '', 'img-responsive'); ?>
                         <div class="team-details">
                             <h4>John Doe</h4>
                             <div class="designation">Senior Web Developer</div>
@@ -695,7 +694,7 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member">
-                        <?= HTML::image('team/team-3.png', '', 'img-responsive'); ?>
+                        <?= HTML::image('team/team-3.jpg', '', 'img-responsive'); ?>
                         <div class="team-details">
                             <h4>John Doe</h4>
                             <div class="designation">Senior Web Developer</div>
@@ -712,7 +711,7 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member">
-                        <?= HTML::image('team/team-4.png', '', 'img-responsive'); ?>
+                        <?= HTML::image('team/team-4.jpg', '', 'img-responsive'); ?>
                         <div class="team-details">
                             <h4>John Doe</h4>
                             <div class="designation">Senior Web Developer</div>
@@ -755,7 +754,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="latest-post">
-                        <img src="images/blog-01.jpg" class="img-responsive" alt="">
+                        <?= HTML::image('blog-01.jpg', '', 'img-responsive'); ?>
                         <h4><a href="#">Standard Post with Image</a></h4>
                         <div class="post-details">
                             <ul>

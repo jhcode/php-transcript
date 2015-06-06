@@ -16,7 +16,7 @@ $dbconfig =
 $site = 
 [
 // Enter the location of the application on your server e.g http://localhost/precure
-	'url'			=> 'http://joseph.rex/projects/transcriptn', 
+	'url'			=> 'http://joseph.rex/projects/transcript', 
 ];
 define('BASE_DIR', __DIR__);
 define('__vendors__', __DIR__.'/vendor');

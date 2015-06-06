@@ -13,6 +13,16 @@ class BaseController{
 		// Close the database connection
 		$this->db = null;
 	}
+  public function apply(){
+   $input = [
+    'student_name'  => Input::get('name'),
+    'student_email' => Input::get('email'),
+    'student_phone' => Input::get('phone'),
+    'campus_id'     => Input::get('campus_id')
+   ];
+   $insert = DB::insert('transcripts', $input);
+   echo "Transcript request succesfully submitted and will be processed shortly";
+  }
 
 	public function auth(){
 		$conn = $this->db;
