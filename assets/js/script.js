@@ -24,7 +24,7 @@ $(document).ready(function ($) {
       $('#contactForm').trigger("reset");
   	});
   });
-  $('#authForm').submit(function(e){
+  $('#authForm, #registrarForm').submit(function(e){
   	e.preventDefault();
   	var data = $(this).serialize(), url = $(this).prop('action');
   	$.ajax({

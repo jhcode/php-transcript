@@ -111,7 +111,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="menu-item color responsive">
-                            <a href="#service-modal" data-toggle="modal">
+                            <a href="#registrar-modal" data-toggle="modal">
                                 <i class="fa fa-area-chart"></i>
                                 <p>Registrar Log in</p>
                             </a>
@@ -280,6 +280,54 @@
         </div>
 <!-- End Portfolio Section -->
 
+<!-- Start Portfolio Section -->
+<div class="section-modal modal fade" id="registrar-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h3>Registrar Log in</h3>
+                    <p>Log in to approve transcript request</p>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12">
+                    <form name="sentMessage" id="registrarForm" method="post" action="<?= url(); ?>/auth">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your user name *" id="name" name="user" required data-validation-required-message="Please enter your user name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Your Password *" id="email" name="password" required data-validation-required-message="Please enter your password.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Staff ID*" id="id" name="staff_id" required data-validation-required-message="Please enter your Staff ID">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <input type="hidden" name="source" value="login">
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-primary">Apply for Transcript</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>  
+            </div><!-- /.row -->
+        </div>
+<!-- End Portfolio Section -->
 
 <!-- Start About Us Section -->
 <div class="section-modal modal fade" id="about-modal" tabindex="-1" role="dialog" aria-hidden="true">
